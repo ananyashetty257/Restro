@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Login - AnanyaBites</title>
+<style>
+body {
+background-color: #fff5f5;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+min-height: 100vh;
+margin: 0;
+padding: 2rem;
+color: #b3404a;
+}
+header {
+margin-bottom: 2rem;
+text-align: center;
+}
+header h1 {
+font-size: 2.4rem;
+margin-bottom: 0.3rem;
+}
+header p {
+font-style: italic;
+font-weight: 500;
+color: #833838;
+}
+nav {
+margin-bottom: 2rem;
+}
+nav a {
+
+text-decoration: none;
+color: #b3404a;
+font-weight: bold;
+margin: 0 1rem;
+padding: 0.3rem 0.7rem;
+border-radius: 20px;
+transition: background-color 0.3s ease;
+}
+nav a:hover {
+background-color: #f9d6d6;
+}
+main {
+background: white;
+padding: 2rem 2.5rem;
+border-radius: 12px;
+box-shadow: 0 4px 8px rgba(179, 64, 74, 0.3);
+width: 100%;
+max-width: 350px;
+}
+form {
+display: flex;
+flex-direction: column;
+gap: 1.3rem;
+}
+label {
+font-weight: 600;
+margin-bottom: 0.3rem;
+}
+input[type="text"],
+input[type="password"] {
+padding: 0.7rem 1rem;
+font-size: 1rem;
+border: 1.5px solid #d99191;
+border-radius: 8px;
+transition: border-color 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+border-color: #b3404a;
+outline: none;
+}
+input[type="submit"] {
+background-color: #b3404a;
+color: white;
+padding: 0.8rem 1rem;
+font-weight: 700;
+font-size: 1.1rem;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover {
+background-color: #833838;
+}
+#savedData {
+margin-top: 1.5rem;
+font-weight: 600;
+color: #4a2a2e;
+text-align: center;
+}
+</style>
+
+</head>
+<body>
+<header>
+<h1>Welcome Back!</h1>
+<p>Sign in to order your favorites </p>
+</header>
+<nav>
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="login.html">Login</a>
+<a href="contact.html">Contact</a>
+</nav>
+<main>
+<form onsubmit="storeUser(); return false;">
+<label for="username">Username</label>
+<input type="text" id="username" placeholder="Enter your username" required />
+<label for="password">Password</label>
+<input type="password" id="password" placeholder="Enter your password" required />
+<input type="submit" value="Log In" />
+</form>
+<p id="savedData"></p>
+</main>
+<footer style="margin-top: 3rem; text-align: center; color: #833838; font-weight: 500;">
+&copy; 28June2025|AnanyaBites|created by Anananya| All rights reserved.
+</footer>
+<script>
+function storeUser() {
+const user = document.getElementById("username").value.trim();
+const pass = document.getElementById("password").value.trim();
+if (user && pass) {
+localStorage.setItem("username", user);
+localStorage.setItem("password", pass);
+document.getElementById("savedData").innerText = `Hey ${user}! Let's Dig in!!! `;
+} else {
+document.getElementById("savedData").innerText = "Please fill both fields!";
+}
+}
+</script>
+</body>
+</html>
