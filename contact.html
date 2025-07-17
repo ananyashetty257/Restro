@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-section {
+            background: #e0eaff;
+            padding: 2.5rem 0 2rem 0;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .contact-form {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(79,140,255,0.10);
+            padding: 2rem 2.5rem 1.5rem 2.5rem;
+            max-width: 400px;
+            width: 100%;
+        }
+        .contact-form label {
+            display: block;
+            margin-top: 1.1rem;
+            font-weight: 500;
+            color: #e095d0;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.7rem;
+            margin-top: 0.4rem;
+            border: 1px solid #b3c6ff;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: #f7f8fa;
+            transition: border 0.2s;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border: 1.5px solid #e095d0;
+            outline: none;
+        }
+        .contact-form button {
+            margin-top: 1.3rem;
+            padding: 0.7rem 2.2rem;
+            background: #e095d0;
+            color: #fff;
+            border: none;
+            border-radius: 24px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(79,140,255,0.10);
+            transition: background 0.2s;
+        }
+        .contact-form button:hover {
+            background: #e095d0;
+        }
+        @media (max-width: 600px) {
+            .contact-form {
+                padding: 1.2rem 0.7rem 1rem 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-flex">
+            <h1 class="logo">City Library</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">Shopieee</a></li>
+                    <li><a href="shopping.html" class="nav-link">Your love shopiee</a></li>
+                    <li><a href="contact.html" class="nav-link" style="text-decoration:underline;">Contact Shopiee</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="contact-section">
+            <h2 class="hero-title" style="color:#e095d0;">Contact Us</h2>
+            <form class="contact-form" action="http://localhost:3000/contact" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Cutiee!! all set</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ShopieeHappy. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
